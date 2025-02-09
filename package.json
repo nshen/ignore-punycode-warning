@@ -1,7 +1,7 @@
 {
-  "name": "tsup-npm-package-template",
+  "name": "ignore-punycode-warning",
   "version": "1.0.0",
-  "description": "build npm package compatible with ESM and CJS",
+  "description": "Temporarily ignore punycode warning",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -20,6 +20,7 @@
     "build": "tsup"
   },
   "devDependencies": {
+    "@types/node": "^22.13.1",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },
@@ -27,10 +28,8 @@
     "access": "public"
   },
   "keywords": [
-    "TypeScript",
-    "npm package starter",
-    "ESM",
-    "CJS"
+    "punycode",
+    "DeprecationWarning"
   ],
   "author": "nshen <nshen121@gmail.com>",
   "license": "MIT"

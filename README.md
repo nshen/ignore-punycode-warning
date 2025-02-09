@@ -1,101 +1,87 @@
-# Modern TypeScript NPM Package Template
+# Ignore punycode deprecation warning 
 
-[English](#english) | [中文](#中文)
+[中文](#chinese)
 
-<a name="english"></a>
+Temporarily ignore the annoying punycode warning with a simple import.
 
-A template for developing modern npm packages using TypeScript, supporting both CommonJS (CJS) and ECMAScript Modules (ESM). This template uses tsup for efficient bundling.
+## Installation
 
-## Features
-
-- 🚀 TypeScript support
-- 📦 Dual CJS and ESM output
-- 🛠 tsup for fast and efficient bundling
-- 📊 Type declarations included
-- 🔄 Easy to use and customize
-
-## Getting Started
-
-```
-git clone https://github.com/nshen/tsup-npm-package-template 
-cd tsup-npm-package-template 
-# Modify as needed
-npm run build
-npm login
-npm publish
+```bash
+npm install ignore-punycode-warning
 ```
 ## Usage
 
-After publishing the package, you can import it in your project:
+Simply import this package at the beginning of your entry file:
 
 ```ts
-// ESM
-import { yourFunction } from 'your-package-name';
+import 'ignore-punycode-warning';
 
-// CommonJS
-const { yourFunction } = require('your-package-name');
+// The rest of your code
 ```
 
-## Configuration
+or for CommonJS:
 
-The project uses tsup for bundling. You can modify the tsup.config.ts file to adjust the build configuration.
+```js
 
-## Contributing
+require('ignore-punycode-warning');
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License
-
----
-
-<a name="中文"></a>
-
-# 现代 TypeScript NPM 包模板
-
-这是一个使用 TypeScript 开发现代化 npm 包的模板，同时支持 CommonJS (CJS) 和 ECMAScript 模块 (ESM)。本模板使用 tsup 进行高效打包。
-
-## 特性
-
-- 🚀 支持 TypeScript
-- 📦 同时输出 CJS 和 ESM 格式
-- 🛠 使用 tsup 进行快速高效的打包
-- 📊 包含类型声明文件
-- 🔄 易于使用和自定义
-
-## 快速开始
-
+// The rest of your code
 ```
-git clone https://github.com/nshen/tsup-npm-package-template 
-cd tsup-npm-package-template 
-# Modify as needed
-npm run build
-npm login
-npm publish
+This will temporarily suppress the punycode deprecation warning.
+
+## Why?
+
+Node.js has been showing a annoying deprecation warning for the punycode module. 
+
+```bash
+(node:2701) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+```
+
+This package provides a quick solution to ignore this warning until you're ready to address it in your project.
+
+-----
+
+<a name="chinese"></a>
+
+## 忽略 punycode deprecation warning 报错
+
+只需要引入此包就可以临时忽略讨厌的 punycode warning。
+
+## 安装
+
+```bash
+npm install ignore-punycode-warning
 ```
 
 ## 使用方法
 
-安装包后，您可以在项目中导入它：
+只需在您的入口文件开头导入此包：
+
 
 ```ts
-// ESM
-import { yourFunction } from 'your-package-name';
+import 'ignore-punycode-warning';
 
-// CommonJS
-const { yourFunction } = require('your-package-name');
+// The rest of your code
 ```
 
-## 配置
+如果是 CommonJS:
 
-项目使用 tsup 进行打包。您可以修改 tsup.config.ts 文件来调整构建配置。
+```js
 
-## 贡献
+require('ignore-punycode-warning');
 
-欢迎贡献！请随时提交 Pull Request。
+// The rest of your code
+```
 
-## 许可证
+## 为什么使用这个包？
 
-本项目采用 MIT 许可证
+Node.js 一直在显示讨厌的 punycode 模块的弃用警告。
+
+```bash
+(node:2701) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+```
+
+这个包提供了一个快速解决方案，可以忽略这个警告，直到您准备好在项目中解决它。
 
