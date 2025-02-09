@@ -1,0 +1,37 @@
+{
+  "name": "tsup-npm-package-template",
+  "version": "1.0.0",
+  "description": "build npm package compatible with ESM and CJS",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "TypeScript",
+    "npm package starter",
+    "ESM",
+    "CJS"
+  ],
+  "author": "nshen <nshen121@gmail.com>",
+  "license": "MIT"
+}
